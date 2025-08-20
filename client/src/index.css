@@ -79,7 +79,9 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
+  
 }
 
 @layer utilities {
@@ -158,9 +160,68 @@
   animation: scaleIn 0.5s ease-out;
 }
 
-/* Smooth scrolling */
+/* Prevent horizontal overflow and smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure all containers respect viewport width */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix any potential overflow issues */
+.max-w-7xl {
+  max-width: min(80rem, calc(100vw - 2rem));
+}
+
+/* Ensure images and other content don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent text overflow on small screens */
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Fix grid layouts on mobile */
+.grid {
+  width: 100%;
+}
+
+/* Ensure flex containers don't overflow */
+.flex {
+  flex-wrap: wrap;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  /* Ensure proper padding on mobile */
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Fix any large text that might overflow */
+  .text-4xl, .text-6xl {
+    font-size: clamp(2rem, 8vw, 4rem) !important;
+  }
+  
+  /* Ensure buttons fit on mobile */
+  .flex.flex-wrap.gap-4 {
+    justify-content: center;
+  }
+  
+  /* Fix grid layouts */
+  .grid.lg\\:grid-cols-2, .grid.md\\:grid-cols-2, .grid.lg\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
 }
 
 /* Custom scrollbar */

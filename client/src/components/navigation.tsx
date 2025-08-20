@@ -42,7 +42,15 @@ export default function Navigation() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Add offset for fixed navigation
+      const offset = 80; // Height of fixed nav
+      const elementPosition = element.offsetTop - offset;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+      
       setIsMobileMenuOpen(false); // Close mobile menu after navigation
     }
   };
