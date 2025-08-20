@@ -3,50 +3,50 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const skills = [
   {
-    name: "Frontend Development",
-    description: "React, Vue.js, TypeScript, Tailwind CSS",
+    name: "Network Administration",
+    description: "LAN/WAN, VPN, Firewall Configuration",
     proficiency: 90,
     color: "blue",
-    icon: "💻"
+    icon: "🌐"
   },
   {
-    name: "Backend Development",
-    description: "Node.js, Express, MongoDB, PostgreSQL",
+    name: "System Administration",
+    description: "Active Directory, Microsoft 365, VDI",
     proficiency: 85,
     color: "green",
     icon: "🖥️"
   },
   {
-    name: "Mobile Development",
-    description: "React Native, Flutter, iOS/Android",
-    proficiency: 75,
-    color: "purple",
-    icon: "📱"
+    name: "Cybersecurity",
+    description: "Network Security, HCIA-Security, Protocols",
+    proficiency: 80,
+    color: "red",
+    icon: "🔐"
   },
   {
-    name: "Cloud & DevOps",
-    description: "AWS, Docker, Kubernetes, CI/CD",
-    proficiency: 80,
-    color: "orange",
+    name: "Cloud Computing",
+    description: "Cloud Solutions, Virtualization",
+    proficiency: 75,
+    color: "cyan",
     icon: "☁️"
   },
   {
-    name: "UI/UX Design",
-    description: "Figma, Adobe XD, User Research",
+    name: "Full Stack Development",
+    description: "Laravel, C#, SQL, Web Applications",
     proficiency: 70,
-    color: "red",
-    icon: "🎨"
+    color: "purple",
+    icon: "💻"
   },
   {
-    name: "Data Analytics",
-    description: "Python, SQL, Tableau, Machine Learning",
-    proficiency: 65,
-    color: "cyan",
-    icon: "📊"
+    name: "Technical Support",
+    description: "Helpdesk, Hardware Maintenance, Troubleshooting",
+    proficiency: 90,
+    color: "orange",
+    icon: "🔧"
   }
 ];
 
-const colorClasses = {
+const colorClasses: Record<string, { bg: string; progress: string; icon: string }> = {
   blue: {
     bg: "from-blue-50 to-indigo-100",
     progress: "bg-primary",
@@ -93,7 +93,7 @@ export default function SkillsSection() {
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Skills & Expertise</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications
+            Technical expertise in network administration, cybersecurity, and system management
           </p>
         </motion.div>
         

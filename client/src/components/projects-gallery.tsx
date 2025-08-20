@@ -4,52 +4,56 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Dashboard",
-    description: "A comprehensive admin dashboard for e-commerce management with real-time analytics, inventory tracking, and customer management features.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300",
-    technologies: ["React", "Node.js", "PostgreSQL"],
+    title: "Enterprise Network Infrastructure",
+    description: "Designed and implemented secure network infrastructure for Kim-Fay E.A Limited, including firewall configuration, VPN setup, and Active Directory integration for 200+ users.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    technologies: ["Active Directory", "Firewall", "VPN", "Network Security"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "Task Management App",
-    description: "A cross-platform mobile application for team collaboration and project management with real-time synchronization and offline support.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300",
-    technologies: ["React Native", "Firebase", "Redux"],
+    title: "Process Automation Web Application",
+    description: "Developed internal web applications using Laravel and C# for process automation at Kim-Fay E.A Limited, streamlining workflow management and reducing manual tasks by 40%.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    technologies: ["Laravel", "C#", "SQL", "Web Development"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "AI Analytics Platform",
-    description: "An intelligent data analytics platform that uses machine learning to provide predictive insights and automated reporting for business intelligence.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300",
-    technologies: ["Python", "Django", "TensorFlow"],
+    title: "VDI Troubleshooting System",
+    description: "Led troubleshooting initiatives for Virtual Desktop Infrastructure at KRA, working with Huawei Fusion Access and Citrix systems to ensure 99.5% uptime for critical operations.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    technologies: ["Huawei Fusion", "Citrix", "VDI", "System Administration"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "Social Media Platform",
-    description: "A full-featured social networking platform with real-time messaging, content sharing, and advanced privacy controls.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300",
-    technologies: ["Vue.js", "Express", "Socket.io"],
+    title: "Brand Digital Strategy Platform",
+    description: "Created comprehensive digital marketing strategy for Voltic Kenya Limited, including social media management tools and brand asset creation that increased followers by 150%.",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    technologies: ["Graphic Design", "Social Media", "Brand Management", "Digital Marketing"],
     demoUrl: "#",
     githubUrl: "#"
   }
 ];
 
-const techColors = {
-  "React": "bg-blue-100 text-blue-800",
-  "Node.js": "bg-green-100 text-green-800",
-  "PostgreSQL": "bg-purple-100 text-purple-800",
-  "React Native": "bg-cyan-100 text-cyan-800",
-  "Firebase": "bg-orange-100 text-orange-800",
-  "Redux": "bg-red-100 text-red-800",
-  "Python": "bg-yellow-100 text-yellow-800",
-  "Django": "bg-indigo-100 text-indigo-800",
-  "TensorFlow": "bg-green-100 text-green-800",
-  "Vue.js": "bg-blue-100 text-blue-800",
-  "Express": "bg-green-100 text-green-800",
-  "Socket.io": "bg-gray-100 text-gray-800"
+const techColors: Record<string, string> = {
+  "Active Directory": "bg-blue-100 text-blue-800",
+  "Firewall": "bg-red-100 text-red-800",
+  "VPN": "bg-green-100 text-green-800",
+  "Network Security": "bg-purple-100 text-purple-800",
+  "Laravel": "bg-red-100 text-red-800",
+  "C#": "bg-purple-100 text-purple-800",
+  "SQL": "bg-orange-100 text-orange-800",
+  "Web Development": "bg-cyan-100 text-cyan-800",
+  "Huawei Fusion": "bg-indigo-100 text-indigo-800",
+  "Citrix": "bg-green-100 text-green-800",
+  "VDI": "bg-blue-100 text-blue-800",
+  "System Administration": "bg-gray-100 text-gray-800",
+  "Graphic Design": "bg-pink-100 text-pink-800",
+  "Social Media": "bg-cyan-100 text-cyan-800",
+  "Brand Management": "bg-yellow-100 text-yellow-800",
+  "Digital Marketing": "bg-green-100 text-green-800"
 };
 
 export default function ProjectsGallery() {
@@ -66,7 +70,7 @@ export default function ProjectsGallery() {
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A collection of projects that showcase my technical skills and creative problem-solving
+            Key projects and achievements demonstrating expertise in network administration, system development, and digital innovation
           </p>
         </motion.div>
 

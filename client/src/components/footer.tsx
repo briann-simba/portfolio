@@ -10,7 +10,7 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p>&copy; 2024 Alex Thompson. All rights reserved. Built with passion and modern web technologies.</p>
+          <p>&copy; 2024 Brian Athanas Orori. All rights reserved. Built with passion and modern web technologies.</p>
         </motion.div>
       </div>
     </footer>

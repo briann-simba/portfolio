@@ -11,15 +11,15 @@ import Footer from "@/components/footer";
 export default function Portfolio() {
   useEffect(() => {
     // Set page title and meta description
-    document.title = "Alex Thompson - Full Stack Developer Portfolio";
+    document.title = "Brian Athanas Orori - ICT Officer Portfolio";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Full Stack Developer specializing in React, Node.js, and modern web technologies. View my projects, experience, and skills.");
+      metaDescription.setAttribute("content", "ICT Officer specializing in network administration, cybersecurity, and system administration. View my experience, certifications, and technical skills.");
     } else {
       const meta = document.createElement('meta');
       meta.name = "description";
-      meta.content = "Full Stack Developer specializing in React, Node.js, and modern web technologies. View my projects, experience, and skills.";
+      meta.content = "ICT Officer specializing in network administration, cybersecurity, and system administration. View my experience, certifications, and technical skills.";
       document.head.appendChild(meta);
     }
   }, []);

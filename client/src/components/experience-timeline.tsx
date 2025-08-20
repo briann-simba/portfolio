@@ -3,25 +3,25 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    period: "2022 - Present",
-    description: "Led development of scalable web applications serving 100K+ users. Architected microservices infrastructure using Node.js and AWS, reducing system response time by 40%.",
-    technologies: ["React", "Node.js", "AWS", "MongoDB"]
+    title: "Infrastructure and Applications Support Assistant",
+    company: "Kim-Fay E.A Limited",
+    period: "March 2025 - Present",
+    description: "Developing internal web applications for process automation, supporting enterprise systems like MyQ and 3CX, administering Active Directory and Microsoft 365 platforms, implementing firewall rules and network optimization.",
+    technologies: ["Laravel", "C#", "Active Directory", "Microsoft 365"]
   },
   {
-    title: "Frontend Developer",
-    company: "Digital Innovations Inc",
-    period: "2020 - 2022",
-    description: "Developed responsive web applications using React and TypeScript. Collaborated with design teams to implement pixel-perfect UI components, improving user engagement by 35%.",
-    technologies: ["React", "TypeScript", "Vue.js"]
+    title: "ICT Officer Intern",
+    company: "Kenya Revenue Authority - Forodha, JKIA",
+    period: "January 2024 - December 2024",
+    description: "Led team operations as station leader, deployed VPN configurations, troubleshot VDI systems (Huawei Fusion Access and Citrix), and resolved network connectivity issues for seamless access to network resources.",
+    technologies: ["VPN", "Huawei Fusion", "Citrix", "Network Admin"]
   },
   {
-    title: "Junior Web Developer",
-    company: "StartupHub",
-    period: "2019 - 2020",
-    description: "Built and maintained company websites using modern JavaScript frameworks. Gained expertise in full-stack development and agile methodologies.",
-    technologies: ["JavaScript", "PHP", "MySQL"]
+    title: "Graphic Designer/Social Media Manager Intern",
+    company: "Voltic Kenya Limited",
+    period: "August 2023 - December 2023",
+    description: "Maintained brand visual identity, created marketing materials including posters and digital banners, managed social media accounts and developed growth strategies that significantly increased brand visibility and followers.",
+    technologies: ["Graphic Design", "Social Media", "Brand Management"]
   }
 ];
 

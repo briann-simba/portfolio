@@ -11,12 +11,13 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-800 mb-6">
-              Hi, I'm <span className="text-primary">Alex</span>
-              <div className="text-2xl lg:text-4xl text-secondary mt-2">Full Stack Developer</div>
+              Hi, I'm <span className="text-primary">Brian</span>
+              <div className="text-2xl lg:text-4xl text-secondary mt-2">ICT Officer</div>
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              I create digital experiences that combine beautiful design with powerful functionality. 
-              With 5+ years of experience, I specialize in React, Node.js, and modern web technologies.
+              Dynamic and results-oriented ICT professional with hands-on experience in system 
+              administration, network security, virtualization, and technical user support. 
+              Committed to enhancing operational efficiency and delivering user-centric IT support.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.button
@@ -44,11 +45,9 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex justify-center"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" 
-              alt="Alex Thompson - Professional Headshot" 
-              className="w-80 h-80 rounded-full object-cover shadow-2xl border-8 border-white"
-            />
+            <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-2xl border-8 border-white">
+              <div className="text-8xl font-bold text-primary">B</div>
+            </div>
           </motion.div>
         </div>
       </div>

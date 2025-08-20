@@ -4,55 +4,55 @@ import { GraduationCap, Award, Code, TrendingUp } from "lucide-react";
 
 const educationData = [
   {
-    title: "Master of Computer Science",
-    institution: "Stanford University",
-    description: "Specialized in Artificial Intelligence and Machine Learning",
-    period: "2017 - 2019",
-    grade: "GPA: 3.8/4.0",
+    title: "Bachelor of Science in Computer Science",
+    institution: "Jomo Kenyatta University of Agriculture and Technology",
+    description: "Second Class Honors (Upper Division) - Comprehensive computer science education",
+    period: "2018 - 2022",
+    grade: "Second Class Upper",
     icon: GraduationCap,
     color: "primary"
   },
   {
-    title: "AWS Solutions Architect",
-    institution: "Amazon Web Services",
-    description: "Professional certification for cloud architecture and deployment",
-    period: "2023",
-    grade: "Professional",
+    title: "Huawei Certified ICT Associate (HCIA) - Security",
+    institution: "Communications Authority of Kenya (CAK)",
+    description: "National finalist in cybersecurity bootcamp - intensive enterprise security training",
+    period: "2025",
+    grade: "Finalist - 734/1000",
     icon: Award,
+    color: "red"
+  },
+  {
+    title: "Cyber Shujaa Certification",
+    institution: "CyberShujaa",
+    description: "Cloud and Network Security certification with hands-on experience",
+    period: "2024",
+    grade: "Distinction",
+    icon: Code,
     color: "accent"
   },
   {
-    title: "Full Stack Web Development",
-    institution: "freeCodeCamp",
-    description: "Comprehensive certification covering modern web technologies",
-    period: "2022",
+    title: "Google Cybersecurity Certificate",
+    institution: "Coursera & ICT Authority Kenya",
+    description: "Comprehensive cybersecurity and emerging technologies training",
+    period: "2024",
     grade: "Certified",
-    icon: Code,
-    color: "green"
-  },
-  {
-    title: "Google Analytics Certified",
-    institution: "Google",
-    description: "Advanced analytics and data interpretation certification",
-    period: "2023",
-    grade: "Expert",
     icon: TrendingUp,
-    color: "red"
+    color: "green"
   }
 ];
 
-const colorClasses = {
+const colorClasses: Record<string, string> = {
   primary: "bg-primary text-white",
   accent: "bg-accent text-white",
   green: "bg-green-600 text-white",
   red: "bg-red-600 text-white"
 };
 
-const gradeColors = {
-  "GPA: 3.8/4.0": "bg-green-100 text-green-800",
-  "Professional": "bg-blue-100 text-blue-800",
-  "Certified": "bg-green-100 text-green-800",
-  "Expert": "bg-red-100 text-red-800"
+const gradeColors: Record<string, string> = {
+  "Second Class Upper": "bg-green-100 text-green-800",
+  "Finalist - 734/1000": "bg-red-100 text-red-800",
+  "Distinction": "bg-blue-100 text-blue-800",
+  "Certified": "bg-green-100 text-green-800"
 };
 
 export default function EducationSection() {
