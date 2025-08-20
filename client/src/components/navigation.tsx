@@ -40,34 +40,28 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId: string) => {
-    console.log(`Attempting to scroll to section: ${sectionId}`); // Debug log
+    console.log(`Attempting to scroll to section: ${sectionId}`);
     
     // Close mobile menu first
     setIsMobileMenuOpen(false);
     
-    // Use setTimeout to ensure the menu closes before scrolling
+    // Simple, direct scroll approach
     setTimeout(() => {
       const element = document.getElementById(sectionId);
-      console.log(`Found element:`, element); // Debug log
-      
       if (element) {
-        // Use scrollIntoView for better mobile compatibility
-        element.scrollIntoView({ 
-          behavior: "smooth", 
-          block: "start" 
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - 80; // Account for fixed nav
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
         
-        // Then adjust for fixed header
-        setTimeout(() => {
-          const currentScroll = window.scrollY;
-          const offset = 80; // Height of fixed nav
-          window.scrollTo({
-            top: currentScroll - offset,
-            behavior: 'smooth'
-          });
-        }, 100);
+        console.log(`Scrolling to position: ${offsetPosition}`);
+      } else {
+        console.log(`Element with id "${sectionId}" not found`);
       }
-    }, 300); // Wait for menu close animation
+    }, 100); // Minimal delay
   };
 
   const toggleMobileMenu = () => {
@@ -128,16 +122,15 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ 
-          opacity: isMobileMenuOpen ? 1 : 0, 
-          height: isMobileMenuOpen ? "auto" : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-white border-b border-slate-200"
-        data-testid="mobile-menu"
-      >
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden bg-white border-b border-slate-200"
+          data-testid="mobile-menu"
+        >
         <div className="px-4 py-4 space-y-3">
           {[
             { id: "about", label: "About" },
@@ -146,25 +139,24 @@ export default function Navigation() {
             { id: "skills", label: "Skills" },
             { id: "contact", label: "Contact" },
           ].map((item) => (
-            <motion.button
+            <button
               key={item.id}
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log(`Mobile nav clicked: ${item.id}`); // Debug log
+                console.log(`Mobile nav clicked: ${item.id}`);
                 scrollToSection(item.id);
               }}
-              className="block w-full text-left py-2 px-2 text-slate-700 hover:text-primary transition-colors duration-300 cursor-pointer touch-manipulation"
+              className="block w-full text-left py-3 px-4 text-slate-700 hover:text-primary transition-colors duration-300 cursor-pointer border-none bg-transparent"
               data-testid={`mobile-nav-${item.id}`}
-              whileHover={{ x: 4 }}
-              whileTap={{ scale: 0.98 }}
-              style={{ touchAction: 'manipulation' }}
+              type="button"
             >
               {item.label}
-            </motion.button>
+            </button>
           ))}
         </div>
-      </motion.div>
+        </motion.div>
+      )}
     </motion.nav>
   );
 }
