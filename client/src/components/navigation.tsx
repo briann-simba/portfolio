@@ -40,19 +40,34 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Add offset for fixed navigation
-      const offset = 80; // Height of fixed nav
-      const elementPosition = element.offsetTop - offset;
+    console.log(`Attempting to scroll to section: ${sectionId}`); // Debug log
+    
+    // Close mobile menu first
+    setIsMobileMenuOpen(false);
+    
+    // Use setTimeout to ensure the menu closes before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      console.log(`Found element:`, element); // Debug log
       
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
-      
-      setIsMobileMenuOpen(false); // Close mobile menu after navigation
-    }
+      if (element) {
+        // Use scrollIntoView for better mobile compatibility
+        element.scrollIntoView({ 
+          behavior: "smooth", 
+          block: "start" 
+        });
+        
+        // Then adjust for fixed header
+        setTimeout(() => {
+          const currentScroll = window.scrollY;
+          const offset = 80; // Height of fixed nav
+          window.scrollTo({
+            top: currentScroll - offset,
+            behavior: 'smooth'
+          });
+        }, 100);
+      }
+    }, 300); // Wait for menu close animation
   };
 
   const toggleMobileMenu = () => {
@@ -133,11 +148,17 @@ export default function Navigation() {
           ].map((item) => (
             <motion.button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="block w-full text-left py-2 text-slate-700 hover:text-primary transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log(`Mobile nav clicked: ${item.id}`); // Debug log
+                scrollToSection(item.id);
+              }}
+              className="block w-full text-left py-2 px-2 text-slate-700 hover:text-primary transition-colors duration-300 cursor-pointer touch-manipulation"
               data-testid={`mobile-nav-${item.id}`}
               whileHover={{ x: 4 }}
               whileTap={{ scale: 0.98 }}
+              style={{ touchAction: 'manipulation' }}
             >
               {item.label}
             </motion.button>
