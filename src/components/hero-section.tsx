@@ -30,6 +30,8 @@ export default function HeroSection() {
               >
                 Download CV
               </motion.a>
+          </div>
+          </motion.div>
           
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
