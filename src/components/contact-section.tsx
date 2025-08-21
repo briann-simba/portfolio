@@ -41,7 +41,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-16 bg-slate-800 text-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -51,9 +51,9 @@ export default function ContactSection() {
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
           </p>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid place-items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
@@ -91,26 +91,30 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="mt-12">
-              <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://linkedin.com/in/brian-simba-293681198" 
-                  className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
-                  data-testid="social-linkedin"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a 
-                  href="https://github.com/briann-simba" 
-                  className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
-                  data-testid="social-github"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-                
-              </div>
+            <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12"
+          >
+            <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
+            <div className="flex space-x-4">
+              <a 
+                href="https://linkedin.com/in/brian-simba-293681198" 
+                className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
+                data-testid="social-linkedin"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://github.com/briann-simba" 
+                className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
+                data-testid="social-github"
+              >
+                <Github className="w-6 h-6" />
+              </a>
             </div>
+          </motion.div>
           </motion.div>
 
           
