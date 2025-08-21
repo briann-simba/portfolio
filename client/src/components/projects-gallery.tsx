@@ -86,44 +86,7 @@ export default function ProjectsGallery() {
               data-testid={`project-card-${index}`}
             >
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-800 mb-3">{project.title}</h3>
-                <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-2 py-1 rounded text-sm ${techColors[tech] || 'bg-gray-100 text-gray-800'}`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-between items-center">
-                  <button 
-                    className="text-primary hover:text-blue-700 font-semibold transition-colors"
-                    data-testid={`button-view-details-${index}`}
-                  >
-                    View Details →
-                  </button>
-                  <div className="flex space-x-3">
-                    <a 
-                      href={project.demoUrl} 
-                      className="text-slate-400 hover:text-slate-600 transition-colors"
-                      data-testid={`link-demo-${index}`}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a 
-                      href={project.githubUrl} 
-                      className="text-slate-400 hover:text-slate-600 transition-colors"
-                      data-testid={`link-github-${index}`}
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              
             </motion.div>
           ))}
         </div>
