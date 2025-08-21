@@ -19,10 +19,10 @@ export default function HeroSection() {
               administration, network security, virtualization, and technical user support. 
               Committed to enhancing operational efficiency and delivering user-centric IT support.
             </p>
-            <div className="flex flex-wrap gap-4">
+            {/* <div className="flex flex-wrap gap-4">
               <motion.a
-                href="/attached_assets/Brian_Athanas_Orori_CV.pdf" 
-                download="Brian_Athanas_Orori_CV.pdf" 
+                href="/attached_assets/ORORI_BRIAN_ATHANAS-CV.pdf" 
+                download="ORORI_BRIAN_ATHANAS-CV.pdf" 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer inline-block"
@@ -30,9 +30,9 @@ export default function HeroSection() {
               >
                 Download CV
               </motion.a>
-          </div>
+          </div> */}
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

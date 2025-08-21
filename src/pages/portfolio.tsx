@@ -30,7 +30,7 @@ export default function Portfolio() {
       <HeroSection />
       <SkillsSection />
       <ExperienceTimeline />
-      <ProjectsGallery />
+      {/* <ProjectsGallery /> */}
       <EducationSection />
       <ContactSection />
       <Footer />
