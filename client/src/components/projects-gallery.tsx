@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     title: "Enterprise Network Infrastructure",
-    description: "Designed and implemented secure network infrastructure for Kim-Fay E.A Limited, including firewall configuration, VPN setup, and Active Directory integration for 200+ users.",
+    description: "Designed and implemented secure network infrastructure for Kim-Fay E.A Limited, including firewall configuration, VPN setup, and Active Directory integration.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     technologies: ["Active Directory", "Firewall", "VPN", "Network Security"],
     demoUrl: "#",
@@ -85,13 +85,7 @@ export default function ProjectsGallery() {
               className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100 cursor-pointer"
               data-testid={`project-card-${index}`}
             >
-              <div className="overflow-hidden">
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+              
               <div className="p-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-3">{project.title}</h3>
                 <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>

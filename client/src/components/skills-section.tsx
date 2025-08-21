@@ -122,7 +122,7 @@ export default function SkillsSection() {
                 />
               </div>
               <span className="text-sm text-slate-500">
-                {skill.proficiency >= 85 ? 'Expert' : skill.proficiency >= 75 ? 'Advanced' : skill.proficiency >= 65 ? 'Proficient' : 'Intermediate'} - {skill.proficiency}%
+                {skill.proficiency >= 85 ? 'Proficient' : skill.proficiency >= 75 ? 'Advanced' : skill.proficiency >= 65 ? 'Proficient' : 'Proficient'} - {skill.proficiency}%
               </span>
             </motion.div>
           ))}
