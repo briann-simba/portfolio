@@ -69,9 +69,6 @@ export default function ProjectsGallery() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Key projects and achievements demonstrating expertise in network administration, system development, and digital innovation
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
