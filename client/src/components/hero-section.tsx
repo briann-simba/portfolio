@@ -23,14 +23,6 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300"
-                data-testid="button-view-work"
-              >
-                View My Work
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
                 data-testid="button-download-cv"
               >
