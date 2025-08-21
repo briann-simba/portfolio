@@ -20,16 +20,16 @@ export default function HeroSection() {
               Committed to enhancing operational efficiency and delivering user-centric IT support.
             </p>
             <div className="flex flex-wrap gap-4">
-              <motion.button
+              <motion.a
+                href="/attached_assets/Brian_Athanas_Orori_CV.pdf" 
+                download="Brian_Athanas_Orori_CV.pdf" 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
+                className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer inline-block"
                 data-testid="button-download-cv"
               >
                 Download CV
-              </motion.button>
-            </div>
-          </motion.div>
+              </motion.a>
           
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
