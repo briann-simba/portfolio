@@ -95,110 +95,25 @@ export default function ContactSection() {
               <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://linkedin.com/in/brian-simba-293681198" 
                   className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
                   data-testid="social-linkedin"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/briann-simba" 
                   className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
                   data-testid="social-github"
                 >
                   <Github className="w-6 h-6" />
                 </a>
-                <a 
-                  href="#" 
-                  className="bg-slate-700 hover:bg-primary rounded-full p-3 transition-colors duration-300"
-                  data-testid="social-twitter"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
+                
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8"
-          >
-            <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                  placeholder="Your full name"
-                  data-testid="input-name"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                  placeholder="your.email@example.com"
-                  data-testid="input-email"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                  placeholder="Project discussion"
-                  data-testid="input-subject"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project..."
-                  data-testid="textarea-message"
-                />
-              </div>
-              
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-primary hover:bg-blue-700 disabled:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                data-testid="button-submit"
-              >
-                <Mail className="w-5 h-5" />
-                <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
-              </motion.button>
-            </form>
-          </motion.div>
+          
         </div>
       </div>
     </section>
